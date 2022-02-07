@@ -1,0 +1,18 @@
+@import '../../sass/variables.scss';
+
+.primary-button{
+  background-color: $dark-brown;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 25px;
+  width: 100%;
+
+  p{
+    color: $off-white !important;
+  }
+
+  &:hover{
+    opacity: .9;
+  }
+}

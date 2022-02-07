@@ -1,0 +1,135 @@
+@import '../../sass/variables.scss';
+@import '../../sass/global.scss';
+
+.farm-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .farm-settings-modal {
+    .modal-content {
+      flex-direction: column;
+      width: 350px;
+      padding: 38px 27px;
+
+      .title-text {
+        margin-bottom: 20px;
+      }
+
+      .options-container {
+        .option {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .filter-toggle-button {
+      display: flex;
+      background-color: $primary-color;
+      height: 30px;
+      padding: 6px;
+      border-radius: 8px;
+      margin-left: 20px;
+
+      .primary-button {
+        background: $gradient;
+        display: flex;
+        align-items: center;
+        padding: 10px 17px;
+
+        &:first-child {
+          margin-right: 7px;
+        }
+
+        .body-text {
+          font-size: 13px;
+          color: $body-background !important;
+        }
+
+        &.inactive {
+          background: transparent;
+          
+          .body-text {
+            @include gradient-text();
+          };
+        }
+      }
+    }
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 2.5fr 3fr;
+    grid-gap: 35px;
+    overflow: auto;
+    flex: 1;
+
+    .collections-container {
+      overflow: auto;
+      padding-right: 5px;
+
+      & > * {
+        margin-bottom: 20px;
+      }
+    }
+
+    .small-screen-modal {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .farm-page {
+    .head {
+      display: block;
+      text-align: center;
+
+      .filter-toggle-button {
+        max-width: 200px;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+    }
+    .main-content {
+      display: block;
+
+      .collections-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .big-screen-nfts-container {
+        display: none;
+      }
+
+      .small-screen-modal {
+        display: flex;
+
+        .small-screen-farm-nfts-container {
+          padding: 15px 0;
+          height: 85vh;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .farm-page {
+    .main-content {
+      .collections-container {
+        display: block
+      }
+    }
+  }
+}

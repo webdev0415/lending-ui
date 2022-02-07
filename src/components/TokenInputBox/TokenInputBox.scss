@@ -1,0 +1,113 @@
+@import "../../sass/variables.scss";
+@import "../../sass/global.scss";
+
+.token-input-box {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 9px 15px;
+  background-color: $body-background;
+  width: 100%;
+  box-sizing: border-box;
+
+  .max-btn-container {
+    button {
+      padding: 1px 12px;
+      border-radius: 7px;
+      background-color: rgba(255, 255, 255, 0.555);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.355);
+      }
+    }
+
+    p {
+      font-size: 10px;
+      color: white;
+    }
+  }
+
+  .input-container {
+    height: 100%;
+    margin-right: 3px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+
+    input {
+      border: none;
+      font-size: 22px;
+      text-align: right;
+      max-width: 100px;
+      background: transparent;
+      font-family: "Montserrat", sans-serif;
+      color: rgba(255, 255, 255, 0.801);;
+      outline: none;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+  }
+
+  .asset-details {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    select {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.76);
+    }
+  }
+}
+.range-slide-container {
+  .range-slide {
+    height: 6px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);;
+    margin-top: 15px;
+    border-radius: 2px;
+    position: relative;
+
+    .slider {
+      position: absolute;
+      background-color: $body-background;
+      height: 14px;
+      width: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  } 
+  .size-percents {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .body-text {
+      font-size: 11px;
+    }
+  } 
+}

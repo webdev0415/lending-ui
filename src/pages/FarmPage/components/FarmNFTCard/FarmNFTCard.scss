@@ -1,0 +1,56 @@
+@import "../../../../sass/variables.scss";
+@import "../FarmNFTsContainer/FarmNFTsContainer.scss";
+
+.farm-nft-card {
+  background: $body-background;
+  padding: 18px;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px;
+  }
+
+  .is-loading-msg {
+    text-align: center;
+    padding: 6px 10px;
+    margin-top: 10px;
+    z-index: 2;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  button {
+    width: 100%;
+    border-radius: 7px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.777);
+
+    .body-text {
+      color: $dark-brown !important;
+    }
+
+    &:hover {
+      background: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .farm-nft-card {
+    padding: 20px;
+    
+    button {
+      width: 100%;
+      margin: 0;
+
+      .body-text {
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../../../sass/variables.scss";
+
+.farm-collection-card {
+  background-color: $primary-color;
+  border-radius: 10px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all .5s;
+  margin: 5px;
+  position: relative;
+
+  .wave-triangle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.selected{
+    &::before{
+      content: '';
+      position: absolute;
+      top: -2px; right: -2px; bottom: -2px; left: -2px;
+      z-index: -1;
+      margin: 1px;
+      background: $gradient;
+      border-radius: inherit;
+    }
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .collection-name-and-image {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        background-color: #000000;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      &.column {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+        img {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    button {
+      max-width: 120px;
+      cursor: pointer;
+    }
+  }
+
+  .pool-launch-countdown-container {
+    text-align: center;
+
+    .launch-countdown {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+
+      div {
+        margin-right: 25px;
+
+        .title-text {
+
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .staking-details {
+    & > * {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

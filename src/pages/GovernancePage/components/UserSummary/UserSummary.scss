@@ -1,0 +1,111 @@
+@import "../../../../sass/variables.scss";
+
+.user-summary {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  padding: 20px;
+  z-index: 0;
+
+  .wave-triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  .honey-details {
+    width: 55%;
+
+    .total-honey-container {
+      display: flex;
+      justify-content: space-between;
+      text-align: right;
+      margin-bottom: 15px;
+
+      img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .balance-container {
+        .body-text {
+          font-size: 13px;
+          margin-bottom: 2px;
+        }
+
+        .title-text {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .details-container {
+      .detail-set {
+        margin-bottom: 10px;
+
+        .body-text {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .separator {
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 20px;
+  }
+
+  .buttons-container {
+    width: calc(45%);
+
+    .primary-button {
+      background-color: $body-background;
+      margin-bottom: 10px;
+      
+      &:last-child {
+        margin-bottom: 0
+      }
+
+      .body-text {
+        font-size: 12px;
+      }
+
+      &:nth-child(2) {
+        background: $gradient;
+
+        .body-text {
+          color: $body-background !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .user-summary {
+    flex-direction: column;
+
+    .honey-details {
+      width: 100%;
+    }
+
+    .separator {
+      display: none;
+    }
+
+    .buttons-container {
+      width: 100%;
+
+      .primary-button {
+        display: block;
+        width: fit-content;
+        min-width: 180px;
+        margin: 0 auto 15px;
+
+      }
+    }
+  }
+}

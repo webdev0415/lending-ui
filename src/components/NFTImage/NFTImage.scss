@@ -1,0 +1,54 @@
+@import '../../sass/variables.scss';
+
+.nft-image{
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all .5s;
+
+  &.selected {
+    border: 1.5px solid #DC7D31;
+  }
+
+  &.box-shadow{
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.315);
+  }
+
+  .overlay-box{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .evaluation-tag{
+    position: absolute;
+    bottom: 16px;
+    right: 16px; 
+    border-radius: 5px;
+    background-color: $off-white;
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+
+    img{
+      width: 18px;
+      height: 18px;
+      margin-left: 6px;
+    }
+  }
+
+  .selected-mark-container{
+    background: rgba(0, 0, 0, 0.521);
+
+    svg{
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  }
+
+
+
+}

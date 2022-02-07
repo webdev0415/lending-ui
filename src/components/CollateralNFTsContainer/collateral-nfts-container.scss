@@ -1,0 +1,19 @@
+.collateral-nfts-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.collateral-nfts-container > * {
+  margin-right: 24px;
+  margin-bottom: 30px;
+  flex-basis: 28%;
+}
+
+// mobile device
+@media screen and (max-width: 850px) {
+  .collateral-nfts-container > * {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    flex-basis: 45%;
+  }
+}

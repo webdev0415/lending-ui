@@ -1,0 +1,16 @@
+@import "../../sass/variables.scss";
+
+.body-wrapper {
+  background-color: $primary-color;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-wrapper-small {
+  border-radius: 10px;
+}

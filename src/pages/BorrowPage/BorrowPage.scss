@@ -1,0 +1,97 @@
+@import '../../sass/variables.scss';
+
+.borrow-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .head {
+    margin-bottom: 20px;
+
+    .borrow-nav-btns {
+      display: none;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      a {
+        &:first-child {
+          margin-right: 20px;
+        }
+
+        button {
+          background: $primary-color;
+
+          &.selected {
+            border: 1px solid #F48932;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 35px;
+    overflow: auto;
+    flex: 1;
+
+    .nft-gallery {
+      align-self: flex-start;
+      overflow: auto;
+      padding: 10px 7px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px 4%;
+    }
+
+    .small-screen-modal {
+      display: none;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1020px) {
+  .borrow-page {
+    .main-content {
+      .nft-gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 855px) {
+  .borrow-page {
+
+    .head {
+      text-align: center;
+
+      .borrow-nav-btns {
+        display: flex;
+      }
+    }
+    .main-content {
+      display: block;
+
+      .nft-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+      .big-screen-borrow-form {
+        display: none;
+      }
+
+      .small-screen-modal {
+        display: flex;
+      }
+
+      .modal-borrow-form {
+        position: static;
+        height: fit-content;
+      }
+    }
+  }
+}

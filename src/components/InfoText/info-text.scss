@@ -1,0 +1,37 @@
+@import "../../sass/variables.scss";
+
+.info-text-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-text-left {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.info-text-right {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.info-text-green {
+  color: $green;
+}
+
+.info-text-left-container {
+  display: flex;
+  align-items: center;
+}
+
+.info-text-left-container > div {
+  display: flex;
+  align-items: center;
+}
+
+.info-text-left-container > div > img {
+  max-height: 20px;
+}

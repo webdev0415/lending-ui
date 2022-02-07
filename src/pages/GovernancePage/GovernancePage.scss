@@ -1,0 +1,40 @@
+@import '../../sass/variables.scss';
+@import '../../sass/global.scss';
+
+.governance-page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+
+  .head {
+    margin-bottom: 15px;
+  }
+
+  .summaries-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    margin-bottom: 20px;
+
+    .market-summary,
+    .user-summary {
+      overflow: hidden;
+      background: $primary-color;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .governance-page {
+    padding: 0;
+    .summaries-container {
+      display: block;
+
+      .market-summary {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

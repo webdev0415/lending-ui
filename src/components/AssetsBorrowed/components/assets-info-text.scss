@@ -1,0 +1,18 @@
+@import '../../../sass/variables.scss';
+
+.assets-info-text-green > p {
+  color: $green;
+}
+
+.assets-info-text-percentage {
+  margin-left: 28.53px;
+}
+
+.assets-info-text-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.assets-info-text-text {
+  font-weight: 600;
+}

@@ -1,0 +1,64 @@
+@import '../../../../sass/variables.scss';
+@import '../../../../sass/global.scss';
+
+.governance-page-modal {
+
+  .modal-content {
+    flex-direction: column;
+    max-width: 380px;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+
+    .head {
+      .title-text {
+        font-size: 14px;
+      }
+      .line {
+        height: .5px;
+        background-color: rgba(255, 255, 255, 0.15);
+        margin-top: 12px;
+      }
+    }
+
+    .body-text {
+      font-size: 13px;
+    }
+
+    .details-container {
+      margin: 20px 0;
+      padding: 0 7px;
+
+      .body-text-light {
+        font-size: 13px;
+      }
+
+      .detail-set {
+        margin-bottom: 12px;
+      }
+    }
+
+    .btns-container {
+      display: flex;
+      margin-top: 20px;
+      justify-content: space-between;
+
+      .primary-button {
+        width: 47%;
+        background: $gradient;
+
+        .body-text {
+          color: $body-background !important;
+        }
+
+        &.inactive {
+          background: $body-background;
+          
+          .body-text {
+            @include gradient-text();
+          }
+        }
+      }
+    }
+  }
+}

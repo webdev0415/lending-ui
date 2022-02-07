@@ -1,0 +1,22 @@
+@import '../../sass/variables.scss';
+
+@mixin body-text{
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.63);
+  margin: 0;
+}
+
+.body-text{
+  @include body-text();
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.body-text-light{
+  @include body-text();
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+}

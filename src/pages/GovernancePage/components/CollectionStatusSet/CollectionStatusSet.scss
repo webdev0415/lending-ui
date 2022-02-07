@@ -1,0 +1,28 @@
+@import "../../../../sass/variables.scss";
+
+.collection-status-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .progress-details-container {
+    margin-right: 10px;
+    .progress-bar {
+      width: 180px;
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.12);
+      border-radius: 2px;
+      margin-bottom: 8px;
+      overflow: hidden;
+
+      .range {
+        background: $gradient;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
+}

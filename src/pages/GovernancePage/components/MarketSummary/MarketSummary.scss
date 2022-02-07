@@ -1,0 +1,36 @@
+@import "../../../../sass/global.scss";
+
+.market-summary {
+  position: relative;
+  text-align: center;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  .info-svg-container {
+    position: absolute;
+    left: -8.46%;
+    right: 85.71%;
+    top: -0.18%;
+    bottom: 41.57%;
+  }
+
+  .body-text {
+    font-size: 13px;
+    margin-bottom: 15px;
+
+    .gradient {
+      @include gradient-text();
+    }
+  }
+
+  .details-row {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .body-text {
+      margin:0;
+    }
+  }
+}

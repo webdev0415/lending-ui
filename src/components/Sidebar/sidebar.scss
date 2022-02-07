@@ -1,0 +1,61 @@
+@import "../../sass/variables.scss";
+
+.sidebar {
+  border-radius: 0;
+}
+
+.sidebar-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.sidebar-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  padding: 0 24px;
+
+  a {
+    background: $body-background;
+    border-radius: 7px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+
+    &:hover {
+      background: $gradient;
+
+      path {
+        fill: $body-background;
+      }
+    }
+  }
+}
+
+.sidebar-divider {
+  margin-bottom: 38px;
+  margin-top: 20px;
+  border-top: 1.02px solid black;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.doc-and-whitepaper-container {
+  margin-top: auto;
+}
+
+// media query for screens smaller than 1500px
+@media screen and (max-width: 1800px) {
+  .sidebar-social {
+    padding: 0 5px;
+  }
+}

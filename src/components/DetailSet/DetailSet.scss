@@ -1,0 +1,13 @@
+.detail-set{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .body-text-light {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .body-text {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}

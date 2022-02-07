@@ -1,0 +1,35 @@
+@import "../../../sass/variables.scss";
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+
+  .title-text {
+    font-weight: 400;
+    font-size: 17px;
+  }
+}
+
+.sidebar-item-icon-contnainer {
+  width: 52px;
+  display: flex;
+  justify-content: center;
+
+  div {
+    img {
+      width: 25px;
+    }
+  }
+}
+
+.sidebar-item-selected {
+  .title-text {
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+}

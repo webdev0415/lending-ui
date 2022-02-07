@@ -1,0 +1,102 @@
+@import "../../sass/variables.scss";
+@import "../../sass/global.scss";
+
+@mixin box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.connect-wallet-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $gradient;
+  text-align: center;
+
+  .title-text {
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 40px;
+    z-index: 2;
+  }
+  .body-text {
+    font-size: 28px;
+    z-index: 2;
+  }
+  button {
+    margin-top: 40px;
+    max-width: 320px;
+    z-index: 2;
+
+    .body-text {
+      font-size: 16px;
+    }
+  }
+
+  .waveintro {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .wallet-options-modal {
+    .modal-content {
+      padding: 20px 20px 30px;
+      width: 300px;
+    }
+
+    .wallet-options-container {
+      width: 100%;
+
+      .title-text {
+        margin-bottom: 10px;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+
+      .line {
+        margin-bottom: 20px;
+        background-color: $dark-brown;
+        height: 1px;
+        opacity: 0.3;
+      }
+
+      .wallet-option {
+        background: $body-background;
+        margin-bottom: 25px;
+        cursor: pointer;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        border: .5px solid #df892600;
+        transition: all .3s;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .body-text {
+          font-size: 17px;
+        }
+
+        img {
+          height: 30px;
+          width: auto;
+        }
+
+        &:hover {
+          border: 1px solid #DF8A26
+        }
+      }
+    }
+  }
+}

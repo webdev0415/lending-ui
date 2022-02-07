@@ -1,0 +1,128 @@
+@import "../../sass/variables.scss";
+@import "../../sass/global.scss";
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  z-index: 2;
+
+  .page-options-container {
+    display: flex;
+
+    a {
+      margin-right: 10px;
+    }
+
+    button {
+      background: transparent;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      &.selected {
+        background: $body-background;
+
+        .body-text {
+          @include gradient-text();
+        }
+      }
+    }
+  }
+  
+  .wallet-options-container {
+    width: 100%;
+    height: 100%;
+    max-width: 216px;
+    position: relative;
+
+    .options-toggle {
+      background: $gradient;
+      border-radius: 7px;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .body-text {
+        color: $dark-brown !important;    
+      }
+    }
+
+    .disconnect-button {
+      border-radius: 7px;
+      box-sizing: border-box;
+      background: $primary-color;
+      height: 40px;
+      margin-top: 15px;
+      width: 100%;
+      position: absolute;
+      border: 0.7px solid #df6e187a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all .3s;
+      z-index: -1;
+
+      &.visible {
+        top: 100%;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      &.hidden {
+        top: -15px;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      &:hover {
+        background: $body-background;
+
+        .body-text {
+          color: rgba(255, 255, 255, 0.568);
+        }
+      }
+    }
+  }
+
+  
+}
+
+
+
+
+.options-toggle:hover {
+  cursor: pointer;
+}
+
+.topbar > div > div > svg {
+  display: none;
+}
+
+// mobile devices
+@media screen and (max-width: 855px) {
+  .topbar > div > div > svg {
+    display: block;
+  }
+
+  .topbar-left > p {
+    display: none;
+  }
+
+
+  .topbar {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .page-options-container {
+      display: none;
+    }
+  }
+}

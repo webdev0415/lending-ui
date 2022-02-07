@@ -1,0 +1,23 @@
+.image-with-Bg{
+    position: relative;
+    background-color: #C4C4C4;
+    width: 100%;
+    border-radius: 8px;
+
+    .image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

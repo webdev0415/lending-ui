@@ -1,0 +1,75 @@
+@import "../../sass/variables.scss";
+
+.lend-page-container {
+  display: grid;
+  grid-template-areas: "table deposit-withdraw";
+  grid-gap: 30px;
+  grid-template-columns: 0.85fr auto;
+  height: 60%;
+
+  & > .lend-page-asset{
+    grid-area: table;
+  }
+
+  & > .choice-renderer {
+    grid-area: deposit-withdraw;
+  }
+
+  .market-overview-container,
+  .all-markets-container {
+
+    .title-text {
+      margin-bottom: 20px;
+    }
+  }
+
+  .market-overview-container {
+
+    .overview-box {
+      min-height: 180px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      
+      .stat-set {
+        display: flex;
+        min-width: 160px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+
+        .body-text:last-child {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .withdraw-and-deposit-container {
+    margin-top: 40px;
+    background: $gradient;
+    padding: 1px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    .primary-button-gradient {
+      background: $gradient;
+
+      .body-text {
+        color: $body-background !important;        
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .lend-page-container {
+    grid-template-areas:
+      "table"
+      "deposit-withdraw";
+    grid-template-columns: auto;
+  }
+}

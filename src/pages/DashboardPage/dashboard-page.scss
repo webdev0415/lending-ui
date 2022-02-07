@@ -1,0 +1,159 @@
+@import "../../sass/variables.scss";
+
+@mixin container {
+  background: $primary-color;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.dashboard-page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .title-text {
+    font-size: 15.5px;
+  }
+
+  .dashboard-stats-container {
+    @include container();
+    min-height: 160px;
+    width: 100%;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 50px 25px;
+
+    .dashboard-stat {
+      text-align: center;
+
+      .title-text {
+        &:first-child{
+          margin-bottom: 9px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  .most-traded-and-charts-container {
+    flex-grow: 1;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+
+    .most-traded-container {
+      @include container();
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+
+      .title-text {
+        padding-bottom: 20px;
+        border-bottom: .5px solid rgba(255, 255, 255, 0.1);
+        color:rgba(255, 255, 255, 0.5);
+      }
+
+      .cards-container {
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-grow: 1;
+
+        .most-traded-nft-card {
+          padding: 20px 8px;
+          border-bottom: .5px solid rgba(255, 255, 255, 0.07);
+          display: grid;
+          grid-template-columns: auto 45px 1fr auto;
+          grid-gap: 12.8px;
+          align-items: center;
+
+          img {
+            height: 45px;
+            width: 45px;
+            border-radius: 7px;
+          }
+
+          .title-and-volume-container {
+            overflow: hidden;
+            
+            .body-text {
+              font-size: 14px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              &:first-child {
+                margin-bottom: 3px;
+                color: white;
+              }
+            }
+            .body-text-light {
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.4);
+            }
+          }
+
+          .percent-change {
+            color: $green;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .charts-container {
+      @include container();
+      width: 62%;
+      display: flex;
+      flex-direction: column;
+
+      .title-text {
+        margin-bottom: 35px;
+        color:rgba(255, 255, 255, 0.5);
+      }
+
+      .chart {
+        flex-grow: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;   
+      }
+    }
+  }
+}
+
+// media query for mobile
+@media screen and (max-width: 860px) {
+  .dashboard-page-container {
+
+    @mixin mobile-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    .dashboard-stats-container {
+      @include mobile-container();
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+
+      .dashboard-stat {
+        margin: 10px 0;
+      }
+    }
+
+    .most-traded-and-charts-container {
+      display: block;
+
+      .most-traded-container {
+        @include mobile-container();
+        max-height: 70vh;
+      }
+
+      .charts-container {
+        @include mobile-container();
+      }
+    }
+  }
+}
